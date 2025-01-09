@@ -5,7 +5,203 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Windsor Reserve - Model Payzone</title>
     <link rel="stylesheet" href="styles.css">
-    <style></style>
+    <style>/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Header Section */
+header {
+    background-color: #222;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+header .logo img {
+    width: 150px;
+    margin-bottom: 20px;
+    animation: slideInLogo 1.5s ease-out;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 25px;
+    animation: fadeInUp 1s ease-in-out;
+    animation-delay: 0.5s;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6600; /* Bold accent color */
+    transform: scale(1.1); /* Hover zoom effect */
+}
+
+/* Main Content Section */
+.main-content {
+    padding: 40px 20px;
+    background-color: #181818;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Section Titles */
+h2 {
+    color: #f5f5f5;
+    margin-bottom: 25px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* Content Preview Section */
+.content-preview {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.preview-item {
+    width: 250px;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #2a2a2a;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.preview-item:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.preview-item:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.preview-item img {
+    width: 100%;
+    border-bottom: 3px solid #444;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.preview-item img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+.preview-item p {
+    color: #f1f1f1;
+    font-size: 16px;
+    margin-top: 15px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.preview-item:hover {
+    transform: translateY(-10px); /* Slight floating effect */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover */
+}
+
+.preview-item:hover p {
+    color: #ff6600; /* Highlight text on hover */
+}
+
+/* Upcoming Updates Section */
+.upcoming-updates {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+    color: #bbb;
+    font-size: 16px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLogo {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Gradient Background */
+.latest-updates, .upcoming-updates {
+    background: linear-gradient(135deg, rgba(255, 99, 0, 0.8), rgba(255, 0, 98, 0.8));
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .content-preview {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .preview-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }</style>
 </head>
 <body>
     <header>
